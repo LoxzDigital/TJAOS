@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TJA•OS Executive Platform</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:#07111d;color:#eef5ff}
+header{background:#12395f;padding:20px}
+h1{margin:0}
+nav{display:flex;gap:10px;background:#0d2034;padding:10px;flex-wrap:wrap}
+nav button{background:#1d5f93;color:#fff;border:0;padding:10px 14px;border-radius:6px;cursor:pointer}
+.page{display:none;padding:24px}
+.active{display:block}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.card{background:#122840;padding:18px;border-radius:10px}
+table{width:100%;border-collapse:collapse}
+th,td{padding:8px;border-bottom:1px solid #355}
+input{width:100%;padding:10px;background:#091725;color:#fff;border:1px solid #467}
+.answer{margin-top:10px;padding:12px;background:#183753;border-radius:8px}
+</style>
+</head>
+<body>
+<header>
+<h1>TJA•OS</h1>
+<div>Executive Knowledge Platform • Todd Jersey Architecture</div>
+</header>
+
+<nav>
+<button onclick="show('dashboard')">Dashboard</button>
+<button onclick="show('brain')">Project Brain</button>
+<button onclick="show('hours')">Hours</button>
+<button onclick="show('business')">Business Plan</button>
+<button onclick="show('engineering')">BW-602</button>
+</nav>
+
+<section id="dashboard" class="page active">
+<h2>Executive Dashboard</h2>
+<div class="grid">
+<div class="card"><h3>286</h3><p>Estimated Project Hours</p></div>
+<div class="card"><h3>68%</h3><p>MVP Progress</p></div>
+<div class="card"><h3>January</h3><p>Project Kickoff with Susan</p></div>
+<div class="card"><h3>BW-602</h3><p>Engineering Module</p></div>
+</div>
+</section>
+
+<section id="brain" class="page">
+<h2>Project Brain</h2>
+<input id="q" placeholder="Ask about Susan, Julius, Zac, Codex, Base44...">
+<div id="a" class="answer">Ask a question.</div>
+</section>
+
+<section id="hours" class="page">
+<h2>Development Ledger</h2>
+<table>
+<tr><th>Activity</th><th>Hours</th></tr>
+<tr><td>Kickoff / Planning</td><td>18</td></tr>
+<tr><td>Research & Code Study</td><td>34</td></tr>
+<tr><td>Codex Development</td><td>72</td></tr>
+<tr><td>Base44 Prototype</td><td>10</td></tr>
+<tr><td>BW-602 Engineering</td><td>58</td></tr>
+<tr><td>Emails / Coordination</td><td>26</td></tr>
+<tr><td>Meetings & Lunches</td><td>18</td></tr>
+<tr><tr><th>Total</th><th>286 (estimated)</th></tr>
+</table>
+</section>
+
+<section id="business" class="page">
+<h2>Business Plan</h2>
+<ul>
+<li>Mission: AI Operating System for architectural firms.</li>
+<li>Primary Users: Architects, engineers, plan reviewers, municipalities.</li>
+<li>Revenue: SaaS subscriptions, enterprise licensing, API integrations.</li>
+<li>Core Products: ToddJerseyOS + BW-602 engineering module.</li>
+<li>Roadmap: Knowledge graph → AI copilots → permit intelligence.</li>
+</ul>
+</section>
+
+<section id="engineering" class="page">
+<h2>BW-602 Module</h2>
+<p>This module launches the specialized braced-wall engineering workflow. It remains a separate application integrated into ToddJerseyOS.</p>
+</section>
+
+<script>
+function show(id){
+document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+}
+const kb={
+susan:"Susan participated in the January kickoff and planning sessions.",
+julius:"Julius is involved in project coordination and upcoming strategy meetings.",
+zac:"Zac assisted with obtaining project plans.",
+codex:"Estimated Codex effort: 72 hours.",
+base44:"Estimated Base44 prototype effort: 10 hours.",
+hours:"Current reconstructed estimate totals approximately 286 hours."
+};
+document.getElementById('q').oninput=e=>{
+const t=e.target.value.toLowerCase();
+let r="No match found.";
+for(const k in kb){if(t.includes(k)){r=kb[k];break;}}
+document.getElementById('a').textContent=r;
+};
+</script>
+</body>
+</html>
