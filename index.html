@@ -48,6 +48,29 @@ details[open] summary:before{content:"-";background:#1d5f93;color:#fff}
 .metric-box{border:1px solid rgba(156,231,255,.16);border-radius:12px;background:rgba(7,17,29,.36);padding:13px}
 .metric-box span{display:block;color:#9eb3c8;font-size:.76rem;text-transform:uppercase;font-weight:800}
 .metric-box strong{display:block;margin-top:5px;font-size:1.25rem}
+.finance-panel{margin:18px 0;border:1px solid #24445e;border-radius:14px;background:linear-gradient(180deg,rgba(18,40,64,.78),rgba(7,17,29,.42));box-shadow:0 18px 46px rgba(0,0,0,.22);overflow:hidden}
+.finance-head{display:flex;justify-content:space-between;gap:16px;align-items:end;padding:18px;border-bottom:1px solid rgba(89,126,154,.28)}
+.finance-head h3{margin:0;font-size:1.2rem}
+.finance-head p{margin:5px 0 0;color:#c9d8e8;line-height:1.45}
+.chart-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;padding:16px 18px}
+.chart-card{border:1px solid rgba(156,231,255,.14);border-radius:12px;background:rgba(7,17,29,.35);padding:14px}
+.chart-card span{display:block;color:#9eb3c8;font-size:.74rem;text-transform:uppercase;font-weight:800}
+.chart-card strong{display:block;margin:4px 0 10px;font-size:1.35rem}
+.bars{display:flex;align-items:end;gap:8px;height:92px;border-bottom:1px solid rgba(156,231,255,.18);padding-top:8px}
+.bar{flex:1;min-width:26px;border-radius:7px 7px 0 0;background:linear-gradient(180deg,#9ce7ff,#1d5f93);position:relative}
+.bar.gold{background:linear-gradient(180deg,#f1c66d,#9d6d18)}
+.bar.green{background:linear-gradient(180deg,#8ef0bc,#2f8755)}
+.bar.red{background:linear-gradient(180deg,#ff9a90,#96342e)}
+.bar em{position:absolute;left:50%;bottom:100%;transform:translateX(-50%);margin-bottom:5px;color:#eef5ff;font-size:.72rem;font-style:normal;font-weight:800;white-space:nowrap}
+.bar-labels{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:7px;color:#9eb3c8;font-size:.76rem;text-align:center}
+.proforma-ledger{border-top:1px solid rgba(89,126,154,.28)}
+.proforma-ledger summary{grid-template-columns:32px minmax(0,1fr) repeat(3,92px);min-height:62px}
+.proforma-year{justify-self:end;min-width:82px;text-align:right;color:#dcecff;font-weight:800}
+.proforma-note{margin:0;padding:0 18px 16px 58px;color:#c9d8e8;line-height:1.55}
+.proforma-note strong{color:#eef5ff}
+.profit{color:#8ef0bc}
+.loss{color:#ffb1ab}
+@media(max-width:760px){.finance-head{display:block}.proforma-ledger summary{grid-template-columns:32px minmax(0,1fr);gap:8px}.proforma-year{justify-self:start;margin-left:44px}.proforma-note{padding-left:58px}}
 </style>
 </head>
 <body>
@@ -254,18 +277,80 @@ details[open] summary:before{content:"-";background:#1d5f93;color:#fff}
 </div>
 </div>
 
-<div class="strategy-table">
-<table>
-<tr><th>Pro Forma P&amp;L</th><th>Year 1</th><th>Year 2</th><th>Year 3</th></tr>
-<tr><td>Paid Firms, Year End</td><td>50</td><td>200</td><td>650</td></tr>
-<tr><td>Revenue</td><td>$300k</td><td>$1.35M</td><td>$4.95M</td></tr>
-<tr><td>COGS / Cloud / Support</td><td>($90k)</td><td>($310k)</td><td>($940k)</td></tr>
-<tr><td>Gross Profit</td><td>$210k</td><td>$1.04M</td><td>$4.01M</td></tr>
-<tr><td>R&amp;D</td><td>($520k)</td><td>($780k)</td><td>($1.15M)</td></tr>
-<tr><td>Sales &amp; Marketing</td><td>($180k)</td><td>($520k)</td><td>($1.25M)</td></tr>
-<tr><td>G&amp;A</td><td>($160k)</td><td>($260k)</td><td>($520k)</td></tr>
-<tr><th>Operating Income</th><th>($650k)</th><th>($520k)</th><th>$1.09M</th></tr>
-</table>
+<div class="finance-panel">
+<div class="finance-head">
+<div>
+<span class="section-kicker">Financial Model</span>
+<h3>Pro Forma P&amp;L</h3>
+<p>Three-year planning case for a subscription-led BraceLine rollout. Expand each category to see the operating assumption behind the numbers.</p>
+</div>
+<div class="metric-box"><span>Break-even Target</span><strong>Year 3</strong></div>
+</div>
+
+<div class="chart-grid">
+<div class="chart-card">
+<span>Revenue Ramp</span><strong>$300k → $4.95M</strong>
+<div class="bars">
+<div class="bar" style="height:16%"><em>$300k</em></div>
+<div class="bar" style="height:42%"><em>$1.35M</em></div>
+<div class="bar" style="height:92%"><em>$4.95M</em></div>
+</div>
+<div class="bar-labels"><span>Y1</span><span>Y2</span><span>Y3</span></div>
+</div>
+<div class="chart-card">
+<span>Paid Firms</span><strong>50 → 650</strong>
+<div class="bars">
+<div class="bar gold" style="height:18%"><em>50</em></div>
+<div class="bar gold" style="height:44%"><em>200</em></div>
+<div class="bar gold" style="height:92%"><em>650</em></div>
+</div>
+<div class="bar-labels"><span>Y1</span><span>Y2</span><span>Y3</span></div>
+</div>
+<div class="chart-card">
+<span>Operating Income</span><strong>Path to Profitability</strong>
+<div class="bars">
+<div class="bar red" style="height:55%"><em>-$650k</em></div>
+<div class="bar red" style="height:45%"><em>-$520k</em></div>
+<div class="bar green" style="height:92%"><em>$1.09M</em></div>
+</div>
+<div class="bar-labels"><span>Y1</span><span>Y2</span><span>Y3</span></div>
+</div>
+</div>
+
+<div class="proforma-ledger">
+<details open>
+<summary><span class="summary-title">Paid Firms, Year End</span><span class="proforma-year">50</span><span class="proforma-year">200</span><span class="proforma-year">650</span></summary>
+<p class="proforma-note"><strong>Assumption:</strong> design-partner pilots convert into California subscription launch, then west-coast expansion and enterprise/municipal pilots increase year-end firm count.</p>
+</details>
+<details open>
+<summary><span class="summary-title">Revenue</span><span class="proforma-year">$300k</span><span class="proforma-year">$1.35M</span><span class="proforma-year">$4.95M</span></summary>
+<p class="proforma-note"><strong>Breakdown:</strong> Studio and Pro subscriptions drive Year 1; Firm accounts, higher project volume, and limited enterprise contracts drive Years 2-3.</p>
+</details>
+<details>
+<summary><span class="summary-title">COGS / Cloud / Support</span><span class="proforma-year loss">($90k)</span><span class="proforma-year loss">($310k)</span><span class="proforma-year loss">($940k)</span></summary>
+<p class="proforma-note"><strong>Breakdown:</strong> cloud processing, PDF/CAD parsing, document generation, storage, customer support, onboarding assistance, and QA review of generated outputs.</p>
+</details>
+<details>
+<summary><span class="summary-title">Gross Profit</span><span class="proforma-year profit">$210k</span><span class="proforma-year profit">$1.04M</span><span class="proforma-year profit">$4.01M</span></summary>
+<p class="proforma-note"><strong>Assumption:</strong> gross margin improves as parser automation reduces concierge support and template reuse increases across jurisdictions.</p>
+</details>
+<details>
+<summary><span class="summary-title">R&amp;D</span><span class="proforma-year loss">($520k)</span><span class="proforma-year loss">($780k)</span><span class="proforma-year loss">($1.15M)</span></summary>
+<p class="proforma-note"><strong>Breakdown:</strong> product engineering, plan parser, code engine, export stack, QA automation, security, model evaluation, and new compliance modules.</p>
+</details>
+<details>
+<summary><span class="summary-title">Sales &amp; Marketing</span><span class="proforma-year loss">($180k)</span><span class="proforma-year loss">($520k)</span><span class="proforma-year loss">($1.25M)</span></summary>
+<p class="proforma-note"><strong>Breakdown:</strong> design-partner program, webinars, direct sales, content, trade associations, municipal demos, referral partners, and customer success.</p>
+</details>
+<details>
+<summary><span class="summary-title">G&amp;A</span><span class="proforma-year loss">($160k)</span><span class="proforma-year loss">($260k)</span><span class="proforma-year loss">($520k)</span></summary>
+<p class="proforma-note"><strong>Breakdown:</strong> legal, accounting, insurance, admin, procurement support, security documentation, and operating infrastructure.</p>
+</details>
+<details open>
+<summary><span class="summary-title">Operating Income</span><span class="proforma-year loss">($650k)</span><span class="proforma-year loss">($520k)</span><span class="proforma-year profit">$1.09M</span></summary>
+<p class="proforma-note"><strong>Interpretation:</strong> the model funds product and GTM through Years 1-2, then reaches positive operating income in Year 3 as recurring revenue and gross margin scale.</p>
+</details>
+</div>
 </div>
 
 <p class="section-lede">Planning note: this pro forma is a strategic planning model, not a financing offer or accounting forecast. It should be refined as pilot conversion, project volume, parser accuracy, and support burden become measurable.</p>
