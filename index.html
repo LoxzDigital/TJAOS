@@ -33,6 +33,21 @@ details[open] summary:before{content:"-";background:#1d5f93;color:#fff}
 .breakdown{margin:0;padding:0 18px 16px 58px;color:#c9d8e8;line-height:1.55}
 .breakdown li{margin:4px 0}
 .ledger-total{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center;padding:16px 18px;border-top:1px solid #477;background:rgba(29,95,147,.14);font-weight:800}
+.section-kicker{color:#9ce7ff;font-size:.78rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
+.section-lede{max-width:820px;color:#c9d8e8;line-height:1.55}
+.plan-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:18px 0}
+.plan-card{border:1px solid #24445e;border-radius:12px;background:rgba(18,40,64,.68);padding:16px;box-shadow:0 14px 36px rgba(0,0,0,.16)}
+.plan-card h3{margin:0 0 8px;font-size:1rem}
+.plan-card p,.plan-card li{color:#c9d8e8;line-height:1.5}
+.plan-card ul{margin:8px 0 0;padding-left:18px}
+.strategy-table{overflow:hidden;border:1px solid #24445e;border-radius:12px;background:rgba(18,40,64,.58);margin:16px 0}
+.strategy-table th{color:#9ce7ff;background:rgba(29,95,147,.16)}
+.strategy-table th,.strategy-table td{padding:11px 12px;vertical-align:top}
+.strategy-table td{color:#dcecff}
+.metric-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:16px 0}
+.metric-box{border:1px solid rgba(156,231,255,.16);border-radius:12px;background:rgba(7,17,29,.36);padding:13px}
+.metric-box span{display:block;color:#9eb3c8;font-size:.76rem;text-transform:uppercase;font-weight:800}
+.metric-box strong{display:block;margin-top:5px;font-size:1.25rem}
 </style>
 </head>
 <body>
@@ -134,14 +149,115 @@ details[open] summary:before{content:"-";background:#1d5f93;color:#fff}
 </section>
 
 <section id="business" class="page">
-<h2>Business Plan</h2>
+<span class="section-kicker">BraceLine Business Plan</span>
+<h2>GTM Strategy, Investment Plan, and Pro Forma</h2>
+<p class="section-lede">BraceLine is the active braced-wall workload app for architects, planners, builders, and evaluators. TJAOS remains the operating system for project governance, capital planning, research, product roadmap, and investor-facing reporting.</p>
+
+<div class="plan-card">
+<h3>Platform Thesis</h3>
+<p><strong>Mission:</strong> build an AI operating system for architectural firms, beginning with the highest-friction permit and production workflows where time savings can be measured, reviewed, and converted into recurring software revenue.</p>
 <ul>
-<li>Mission: AI Operating System for architectural firms.</li>
-<li>Primary Users: Architects, engineers, plan reviewers, municipalities.</li>
-<li>Revenue: SaaS subscriptions, enterprise licensing, API integrations.</li>
-<li>Core Products: ToddJerseyOS as the project operating system, plus BraceLine as the active braced-wall workload app.</li>
-<li>Roadmap: Knowledge graph → AI copilots → permit intelligence → BraceLine production intake.</li>
+<li><strong>Primary users:</strong> architects, engineers, plan reviewers, municipalities, design-build firms, and builder teams that need faster permit-ready coordination.</li>
+<li><strong>Revenue model:</strong> SaaS subscriptions, enterprise licensing, API integrations, jurisdiction template libraries, and future usage-based document automation.</li>
+<li><strong>Core products:</strong> ToddJerseyOS as the project operating system, plus BraceLine as the active braced-wall workload app acquiring real production demand.</li>
+<li><strong>Roadmap:</strong> knowledge graph → AI copilots → permit intelligence → BraceLine production intake → adjacent code-compliance modules.</li>
 </ul>
+</div>
+
+<div class="metric-strip">
+<div class="metric-box"><span>Core Buyer</span><strong>Small-Mid Architecture Firms</strong></div>
+<div class="metric-box"><span>Entry Market</span><strong>California ADU + Residential</strong></div>
+<div class="metric-box"><span>Revenue Model</span><strong>Subscription + Usage</strong></div>
+<div class="metric-box"><span>Initial Raise</span><strong>$750k Seed</strong></div>
+</div>
+
+<div class="plan-grid">
+<div class="plan-card">
+<h3>Investment Thesis</h3>
+<p>BraceLine compresses a manual, high-friction code workflow into a reviewable software process: plan intake, braced wall line extraction, prescriptive checks, evaluator notes, and export-ready diagrams.</p>
+<ul>
+<li>Targets repetitive production labor inside residential and light commercial plan sets.</li>
+<li>Creates defensible value through code logic, jurisdiction templates, and plan-parser data.</li>
+<li>Expands from braced walls into adjacent permit-intelligence modules.</li>
+</ul>
+</div>
+<div class="plan-card">
+<h3>Research & Development</h3>
+<p>R&D should focus on reliable geometry extraction, code-table automation, and human-verifiable outputs rather than black-box engineering claims.</p>
+<ul>
+<li>PDF/CAD parser: sheet classification, scale detection, walls, openings, dimensions.</li>
+<li>Code engine: CRC/IRC bracing methods, wind/seismic parameters, jurisdiction overrides.</li>
+<li>Export stack: diagram sheet, schedules, calculation packet, CAD/PDF layer output.</li>
+</ul>
+</div>
+<div class="plan-card">
+<h3>Customer Segments</h3>
+<ul>
+<li>Architecture firms producing ADUs, remodels, additions, and residential permit sets.</li>
+<li>Design-build firms that need faster permit-ready structural coordination.</li>
+<li>Plan reviewers and municipalities seeking cleaner braced-wall submissions.</li>
+<li>Engineering consultants who want standardized prescriptive pre-checks.</li>
+</ul>
+</div>
+</div>
+
+<div class="strategy-table">
+<table>
+<tr><th>GTM Phase</th><th>Geo Focus</th><th>Motion</th><th>Success Metric</th></tr>
+<tr><td>Phase 1: Design Partners</td><td>Bay Area, Los Angeles, San Diego</td><td>Concierge pilots with 5-10 architecture/design-build firms using real ADU and residential projects.</td><td>20 successful plan uploads, 10 exported bracewall packages, documented time saved.</td></tr>
+<tr><td>Phase 2: California Launch</td><td>California wildfire/seismic jurisdictions and ADU-heavy cities</td><td>Subscription launch with webinars, jurisdiction templates, evaluator-facing demo packets, and referral partners.</td><td>50 paid firms, $25k+ MRR, repeat usage across multiple projects per firm.</td></tr>
+<tr><td>Phase 3: West Coast Expansion</td><td>CA, OR, WA, NV, AZ</td><td>Add IRC/CBC variants, wind/seismic presets, and regional plan reviewer templates.</td><td>200 paid firms, $110k+ MRR, churn below 3% monthly.</td></tr>
+<tr><td>Phase 4: National Platform</td><td>US residential/light commercial markets</td><td>API integrations, CAD plugins, enterprise accounts, and municipal reviewer tools.</td><td>650 paid firms, enterprise pilots, positive operating margin.</td></tr>
+</table>
+</div>
+
+<div class="strategy-table">
+<table>
+<tr><th>Subscription Tier</th><th>Target User</th><th>Price</th><th>Included Value</th></tr>
+<tr><td>Studio</td><td>Solo architects and small firms</td><td>$199/mo</td><td>10 projects/month, PDF upload, prescriptive checks, diagram export.</td></tr>
+<tr><td>Pro</td><td>Active residential production teams</td><td>$499/mo</td><td>40 projects/month, CAD/PDF parser, jurisdiction presets, revision tracking, branded exports.</td></tr>
+<tr><td>Firm</td><td>Multi-seat architecture/design-build firms</td><td>$1,250/mo</td><td>Unlimited internal users, 150 projects/month, team dashboard, priority templates.</td></tr>
+<tr><td>Enterprise / Municipal</td><td>Large firms, cities, plan-check partners</td><td>Custom</td><td>API access, reviewer portal, custom jurisdiction logic, procurement/security support.</td></tr>
+</table>
+</div>
+
+<div class="plan-grid">
+<div class="plan-card">
+<h3>Use of Seed Capital</h3>
+<ul>
+<li>45% Product engineering: parser, code engine, export workflow, QA automation.</li>
+<li>20% Code research and jurisdiction libraries.</li>
+<li>15% GTM: design partner pilots, demos, webinars, content, sales collateral.</li>
+<li>10% Cloud, security, legal, compliance, and insurance.</li>
+<li>10% Working capital and contingency.</li>
+</ul>
+</div>
+<div class="plan-card">
+<h3>Operating Assumptions</h3>
+<ul>
+<li>Initial ACV blended at roughly $5k per firm, rising with Pro and Firm adoption.</li>
+<li>Usage expansion comes from project volume and additional code modules.</li>
+<li>Gross margin improves as parser automation reduces concierge support.</li>
+<li>Plan outputs remain human-reviewable and architect-controlled.</li>
+</ul>
+</div>
+</div>
+
+<div class="strategy-table">
+<table>
+<tr><th>Pro Forma P&amp;L</th><th>Year 1</th><th>Year 2</th><th>Year 3</th></tr>
+<tr><td>Paid Firms, Year End</td><td>50</td><td>200</td><td>650</td></tr>
+<tr><td>Revenue</td><td>$300k</td><td>$1.35M</td><td>$4.95M</td></tr>
+<tr><td>COGS / Cloud / Support</td><td>($90k)</td><td>($310k)</td><td>($940k)</td></tr>
+<tr><td>Gross Profit</td><td>$210k</td><td>$1.04M</td><td>$4.01M</td></tr>
+<tr><td>R&amp;D</td><td>($520k)</td><td>($780k)</td><td>($1.15M)</td></tr>
+<tr><td>Sales &amp; Marketing</td><td>($180k)</td><td>($520k)</td><td>($1.25M)</td></tr>
+<tr><td>G&amp;A</td><td>($160k)</td><td>($260k)</td><td>($520k)</td></tr>
+<tr><th>Operating Income</th><th>($650k)</th><th>($520k)</th><th>$1.09M</th></tr>
+</table>
+</div>
+
+<p class="section-lede">Planning note: this pro forma is a strategic planning model, not a financing offer or accounting forecast. It should be refined as pilot conversion, project volume, parser accuracy, and support burden become measurable.</p>
 </section>
 
 <section id="engineering" class="page">
