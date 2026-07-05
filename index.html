@@ -18,6 +18,7 @@ table{width:100%;border-collapse:collapse}
 th,td{padding:8px;border-bottom:1px solid #355}
 input{width:100%;padding:10px;background:#091725;color:#fff;border:1px solid #467}
 .answer{margin-top:10px;padding:12px;background:#183753;border-radius:8px}
+a{color:#9ce7ff}
 </style>
 </head>
 <body>
@@ -37,10 +38,10 @@ input{width:100%;padding:10px;background:#091725;color:#fff;border:1px solid #46
 <section id="dashboard" class="page active">
 <h2>Executive Dashboard</h2>
 <div class="grid">
-<div class="card"><h3>286</h3><p>Estimated Project Hours</p></div>
+<div class="card"><h3>289</h3><p>Estimated Project Hours</p></div>
 <div class="card"><h3>68%</h3><p>MVP Progress</p></div>
 <div class="card"><h3>January</h3><p>Project Kickoff with Susan</p></div>
-<div class="card"><h3>BW-602</h3><p>Engineering Module</p></div>
+<div class="card"><h3>BraceLine</h3><p>Active workload intake app</p></div>
 </div>
 </section>
 
@@ -61,7 +62,8 @@ input{width:100%;padding:10px;background:#091725;color:#fff;border:1px solid #46
 <tr><td>BW-602 Engineering</td><td>58</td></tr>
 <tr><td>Emails / Coordination</td><td>26</td></tr>
 <tr><td>Meetings & Lunches</td><td>18</td></tr>
-<tr><tr><th>Total</th><th>286 (estimated)</th></tr>
+<tr><td>Today's OS / BraceLine routing update</td><td>3</td></tr>
+<tr><th>Total</th><th>289 (estimated)</th></tr>
 </table>
 </section>
 
@@ -71,14 +73,15 @@ input{width:100%;padding:10px;background:#091725;color:#fff;border:1px solid #46
 <li>Mission: AI Operating System for architectural firms.</li>
 <li>Primary Users: Architects, engineers, plan reviewers, municipalities.</li>
 <li>Revenue: SaaS subscriptions, enterprise licensing, API integrations.</li>
-<li>Core Products: ToddJerseyOS + BW-602 engineering module.</li>
-<li>Roadmap: Knowledge graph → AI copilots → permit intelligence.</li>
+<li>Core Products: ToddJerseyOS as the project operating system, plus BraceLine as the active braced-wall workload app.</li>
+<li>Roadmap: Knowledge graph → AI copilots → permit intelligence → BraceLine production intake.</li>
 </ul>
 </section>
 
 <section id="engineering" class="page">
 <h2>BW-602 Module</h2>
-<p>This module launches the specialized braced-wall engineering workflow. It remains a separate application integrated into ToddJerseyOS.</p>
+<p>TJAOS tracks the project, decisions, hours, roadmap, and business context. BraceLine is the active application that will acquire workload from architects, planners, builders, and evaluators.</p>
+<p><a href="https://loxzdigital.github.io/BraceLine/" target="_blank" rel="noopener">Open active BraceLine app</a></p>
 </section>
 
 <script>
@@ -90,9 +93,10 @@ const kb={
 susan:"Susan participated in the January kickoff and planning sessions.",
 julius:"Julius is involved in project coordination and upcoming strategy meetings.",
 zac:"Zac assisted with obtaining project plans.",
-codex:"Estimated Codex effort: 72 hours.",
+codex:"Estimated Codex effort: 72 hours, plus 3 hours added today for OS and BraceLine routing.",
 base44:"Estimated Base44 prototype effort: 10 hours.",
-hours:"Current reconstructed estimate totals approximately 286 hours."
+hours:"Current reconstructed estimate totals approximately 289 hours after adding 3 hours for today's OS and BraceLine routing update.",
+braceline:"BraceLine is the active app for architect, planner, builder, and evaluator workload intake. TJAOS is the operating system around the project."
 };
 document.getElementById('q').oninput=e=>{
 const t=e.target.value.toLowerCase();
