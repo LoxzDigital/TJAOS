@@ -70,6 +70,11 @@ details[open] summary:before{content:"-";background:#1d5f93;color:#fff}
 .proforma-note strong{color:#eef5ff}
 .profit{color:#8ef0bc}
 .loss{color:#ffb1ab}
+.exit-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;padding:0 18px 18px}
+.exit-card{border:1px solid rgba(156,231,255,.14);border-radius:12px;background:rgba(7,17,29,.32);padding:14px}
+.exit-card h4{margin:0 0 6px;color:#eef5ff}
+.exit-card p{margin:0;color:#c9d8e8;line-height:1.45}
+.source-note{font-size:.78rem;color:#9eb3c8;margin:10px 18px 18px;line-height:1.45}
 @media(max-width:760px){.finance-head{display:block}.proforma-ledger summary{grid-template-columns:32px minmax(0,1fr);gap:8px}.proforma-year{justify-self:start;margin-left:44px}.proforma-note{padding-left:58px}}
 </style>
 </head>
@@ -351,6 +356,94 @@ details[open] summary:before{content:"-";background:#1d5f93;color:#fff}
 <p class="proforma-note"><strong>Interpretation:</strong> the model funds product and GTM through Years 1-2, then reaches positive operating income in Year 3 as recurring revenue and gross margin scale.</p>
 </details>
 </div>
+</div>
+
+<div class="finance-panel">
+<div class="finance-head">
+<div>
+<span class="section-kicker">Investor Case</span>
+<h3>Capital Required, ROI Path, and Exit Strategy</h3>
+<p>Illustrative investor view showing the capital needed to make the plan successful, the value-creation path through Year 3, and strategic exit partners that could benefit from BraceLine's code-compliance workflow.</p>
+</div>
+<div class="metric-box"><span>Initial Investment</span><strong>$750k Seed</strong></div>
+</div>
+
+<div class="chart-grid">
+<div class="chart-card">
+<span>Capital Required</span><strong>$750k → $2.25M</strong>
+<div class="bars">
+<div class="bar gold" style="height:38%"><em>$750k</em></div>
+<div class="bar gold" style="height:72%"><em>$1.5M</em></div>
+<div class="bar gold" style="height:92%"><em>$2.25M</em></div>
+</div>
+<div class="bar-labels"><span>Seed</span><span>Series A</span><span>Total</span></div>
+</div>
+<div class="chart-card">
+<span>Implied Exit Value</span><strong>$15M → $45M</strong>
+<div class="bars">
+<div class="bar" style="height:34%"><em>$15M</em></div>
+<div class="bar" style="height:62%"><em>$30M</em></div>
+<div class="bar" style="height:92%"><em>$45M</em></div>
+</div>
+<div class="bar-labels"><span>Low</span><span>Base</span><span>High</span></div>
+</div>
+<div class="chart-card">
+<span>Investor ROI Multiple</span><strong>6.7x → 20.0x</strong>
+<div class="bars">
+<div class="bar green" style="height:34%"><em>6.7x</em></div>
+<div class="bar green" style="height:62%"><em>13.3x</em></div>
+<div class="bar green" style="height:92%"><em>20.0x</em></div>
+</div>
+<div class="bar-labels"><span>Low</span><span>Base</span><span>High</span></div>
+</div>
+</div>
+
+<div class="proforma-ledger">
+<details open>
+<summary><span class="summary-title">Seed Investment Required</span><span class="proforma-year">$750k</span><span class="proforma-year">12-18 mo.</span><span class="proforma-year">Build</span></summary>
+<p class="proforma-note"><strong>Use:</strong> product engineering, PDF/CAD parser, code engine, pilot support, jurisdiction research, security/legal setup, and first GTM campaigns. Goal is to reach a credible paid pilot base and repeatable workflow.</p>
+</details>
+<details>
+<summary><span class="summary-title">Follow-on Capital</span><span class="proforma-year">$1.5M</span><span class="proforma-year">18-30 mo.</span><span class="proforma-year">Scale</span></summary>
+<p class="proforma-note"><strong>Use:</strong> expand parser coverage, hire sales/customer success, add jurisdiction libraries, support enterprise pilots, and build integrations with CAD/BIM and construction platforms.</p>
+</details>
+<details open>
+<summary><span class="summary-title">Base ROI Case</span><span class="proforma-year">$2.25M in</span><span class="proforma-year">$30M exit</span><span class="proforma-year profit">13.3x</span></summary>
+<p class="proforma-note"><strong>Assumption:</strong> Year 3 revenue reaches roughly $4.95M, recurring revenue quality improves, and strategic buyers value the company at an illustrative revenue multiple for a vertical SaaS workflow with defensible code logic and production data.</p>
+</details>
+<details>
+<summary><span class="summary-title">Low / High Exit Range</span><span class="proforma-year">$15M</span><span class="proforma-year">$30M</span><span class="proforma-year">$45M</span></summary>
+<p class="proforma-note"><strong>Interpretation:</strong> low case assumes slower adoption or heavier services burden; base case assumes strong California/West Coast traction; high case assumes enterprise/municipal partnerships and clear expansion into adjacent compliance modules.</p>
+</details>
+</div>
+
+<div class="exit-grid">
+<div class="exit-card">
+<h4>Autodesk</h4>
+<p>Strategic fit with AEC design, construction cloud, and document workflows. Potential interest if BraceLine becomes a differentiated permit/compliance layer for architects.</p>
+</div>
+<div class="exit-card">
+<h4>Trimble</h4>
+<p>Fit with AECO software, field-to-office workflows, constructability, estimating, and connected project data.</p>
+</div>
+<div class="exit-card">
+<h4>Nemetschek / Bluebeam</h4>
+<p>Fit with architecture, engineering, PDF markup, review, and building lifecycle software. BraceLine could enhance reviewer-ready documentation.</p>
+</div>
+<div class="exit-card">
+<h4>Bentley Systems</h4>
+<p>Fit with infrastructure and engineering software if BraceLine expands from residential bracing into broader code and compliance intelligence.</p>
+</div>
+<div class="exit-card">
+<h4>Procore</h4>
+<p>Fit with construction management and preconstruction workflows, especially if BraceLine becomes a permit-readiness and compliance automation module.</p>
+</div>
+<div class="exit-card">
+<h4>Strategic Alternatives</h4>
+<p>Likely alternatives include PE-backed AEC rollups, municipal permitting platforms, CAD/BIM plugin ecosystems, and specialty engineering software vendors.</p>
+</div>
+</div>
+<p class="source-note">Market context: Autodesk has a visible history of construction-tech acquisitions including PlanGrid; Procore has acquired estimating and construction AI companies; Trimble, Nemetschek, Bentley, Autodesk, and Procore are established AEC/construction software platforms. Exit values are illustrative planning scenarios, not a valuation opinion.</p>
 </div>
 
 <p class="section-lede">Planning note: this pro forma is a strategic planning model, not a financing offer or accounting forecast. It should be refined as pilot conversion, project volume, parser accuracy, and support burden become measurable.</p>
