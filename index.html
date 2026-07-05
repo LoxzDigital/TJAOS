@@ -19,6 +19,15 @@ th,td{padding:8px;border-bottom:1px solid #355}
 input{width:100%;padding:10px;background:#091725;color:#fff;border:1px solid #467}
 .answer{margin-top:10px;padding:12px;background:#183753;border-radius:8px}
 a{color:#9ce7ff}
+details{border-bottom:1px solid #355}
+summary{display:grid;grid-template-columns:1fr 120px;gap:16px;align-items:center;padding:10px 8px;cursor:pointer;font-weight:700;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary:before{content:"+";display:inline-grid;place-items:center;width:22px;height:22px;margin-right:8px;border-radius:6px;background:#1d5f93;color:#fff;font-weight:900}
+details[open] summary:before{content:"-"}
+.summary-title{display:flex;align-items:center}
+.summary-hours{text-align:left}
+.breakdown{margin:0 0 10px 38px;padding:0 0 0 16px;color:#c9d8e8;line-height:1.55}
+.ledger-total{display:grid;grid-template-columns:1fr 120px;gap:16px;padding:12px 8px;border-top:1px solid #477;font-weight:800}
 </style>
 </head>
 <body>
@@ -53,18 +62,70 @@ a{color:#9ce7ff}
 
 <section id="hours" class="page">
 <h2>Development Ledger</h2>
-<table>
-<tr><th>Activity</th><th>Hours</th></tr>
-<tr><td>Kickoff / Planning</td><td>18</td></tr>
-<tr><td>Research & Code Study</td><td>34</td></tr>
-<tr><td>Codex Development</td><td>72</td></tr>
-<tr><td>Base44 Prototype</td><td>10</td></tr>
-<tr><td>BW-602 Engineering</td><td>58</td></tr>
-<tr><td>Emails / Coordination</td><td>26</td></tr>
-<tr><td>Meetings & Lunches</td><td>18</td></tr>
-<tr><td>Today's OS / BraceLine routing update</td><td>3</td></tr>
-<tr><th>Total</th><th>289 (estimated)</th></tr>
-</table>
+<div class="ledger">
+<details>
+<summary><span class="summary-title">Kickoff / Planning</span><span class="summary-hours">18</span></summary>
+<ul class="breakdown">
+<li>Initial project framing, goals, and success criteria.</li>
+<li>Stakeholder alignment around TJAOS, BW-602, and BraceLine.</li>
+<li>Early roadmap and scope decisions.</li>
+</ul>
+</details>
+<details>
+<summary><span class="summary-title">Research & Code Study</span><span class="summary-hours">34</span></summary>
+<ul class="breakdown">
+<li>Braced-wall code workflow review and terminology mapping.</li>
+<li>Architectural sheet review and A2.3/A2.2 reference study.</li>
+<li>Prescriptive method, BWL schedule, and evaluator narrative research.</li>
+</ul>
+</details>
+<details>
+<summary><span class="summary-title">Codex Development</span><span class="summary-hours">72</span></summary>
+<ul class="breakdown">
+<li>Static app builds, HTML dashboards, and GitHub Pages publishing.</li>
+<li>BraceLine UI, intake states, plan overlay, and time-savings model.</li>
+<li>Iteration support, debugging, deployment checks, and repository routing.</li>
+</ul>
+</details>
+<details>
+<summary><span class="summary-title">Base44 Prototype</span><span class="summary-hours">10</span></summary>
+<ul class="breakdown">
+<li>Prototype exploration and platform comparison.</li>
+<li>Workflow translation from concept into testable app surfaces.</li>
+</ul>
+</details>
+<details>
+<summary><span class="summary-title">BW-602 Engineering</span><span class="summary-hours">58</span></summary>
+<ul class="breakdown">
+<li>Braced wall diagram strategy and sample sheet production.</li>
+<li>Panel takeoff logic, schedule assumptions, and reviewer-facing explanations.</li>
+<li>BraceLine relationship to prescriptive code workflow and future parser needs.</li>
+</ul>
+</details>
+<details>
+<summary><span class="summary-title">Emails / Coordination</span><span class="summary-hours">26</span></summary>
+<ul class="breakdown">
+<li>Project communication, decision capture, and coordination follow-up.</li>
+<li>Alignment around architects, planners, builders, and plan evaluator audiences.</li>
+</ul>
+</details>
+<details>
+<summary><span class="summary-title">Meetings & Lunches</span><span class="summary-hours">18</span></summary>
+<ul class="breakdown">
+<li>In-person and working-session time for product direction.</li>
+<li>Strategy conversations around commercialization and demonstrations.</li>
+</ul>
+</details>
+<details open>
+<summary><span class="summary-title">Today's OS / BraceLine routing update</span><span class="summary-hours">3</span></summary>
+<ul class="breakdown">
+<li>Clarified TJAOS as the operating system for the project.</li>
+<li>Clarified BraceLine as the active workload intake app.</li>
+<li>Updated GitHub Pages routing, ledger copy, and deployment verification.</li>
+</ul>
+</details>
+<div class="ledger-total"><span>Total</span><span>289 (estimated)</span></div>
+</div>
 </section>
 
 <section id="business" class="page">
