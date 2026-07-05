@@ -75,6 +75,24 @@ details[open] summary:before{content:"-";background:#1d5f93;color:#fff}
 .exit-card h4{margin:0 0 6px;color:#eef5ff}
 .exit-card p{margin:0;color:#c9d8e8;line-height:1.45}
 .source-note{font-size:.78rem;color:#9eb3c8;margin:10px 18px 18px;line-height:1.45}
+.status-panel{margin:18px 0;border:1px solid #24445e;border-radius:14px;background:linear-gradient(135deg,rgba(18,40,64,.88),rgba(7,17,29,.52));box-shadow:0 18px 46px rgba(0,0,0,.2);overflow:hidden}
+.status-top{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:18px;align-items:center;padding:18px;border-bottom:1px solid rgba(89,126,154,.28)}
+.status-top h3{margin:0;font-size:1.15rem}
+.status-top p{margin:5px 0 0;color:#c9d8e8;line-height:1.45}
+.status-score{min-width:116px;text-align:right}
+.status-score strong{display:block;font-size:2.2rem;line-height:1;color:#9ce7ff}
+.status-score span{color:#9eb3c8;font-size:.78rem;text-transform:uppercase;font-weight:800}
+.progress-track{height:12px;margin:0 18px;border-radius:999px;background:rgba(7,17,29,.62);overflow:hidden;border:1px solid rgba(156,231,255,.14)}
+.progress-fill{height:100%;border-radius:inherit;background:linear-gradient(90deg,#2bc1c8,#8ef0bc);box-shadow:0 0 18px rgba(43,193,200,.45)}
+.status-meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;padding:14px 18px}
+.status-chip{border:1px solid rgba(156,231,255,.14);border-radius:10px;background:rgba(7,17,29,.34);padding:10px}
+.status-chip span{display:block;color:#9eb3c8;font-size:.72rem;text-transform:uppercase;font-weight:800}
+.status-chip strong{display:block;margin-top:4px;color:#eef5ff}
+.status-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px;padding:0 18px 18px}
+.status-item{border:1px solid rgba(156,231,255,.12);border-radius:10px;background:rgba(255,255,255,.035);padding:11px}
+.status-item-head{display:flex;justify-content:space-between;gap:10px;margin-bottom:8px;font-weight:800}
+.mini-track{height:7px;border-radius:999px;background:rgba(7,17,29,.64);overflow:hidden}
+.mini-fill{height:100%;border-radius:inherit;background:linear-gradient(90deg,#1d5f93,#9ce7ff)}
 @media(max-width:760px){.finance-head{display:block}.proforma-ledger summary{grid-template-columns:32px minmax(0,1fr);gap:8px}.proforma-year{justify-self:start;margin-left:44px}.proforma-note{padding-left:58px}}
 </style>
 </head>
@@ -180,6 +198,32 @@ details[open] summary:before{content:"-";background:#1d5f93;color:#fff}
 <span class="section-kicker">BraceLine Business Plan</span>
 <h2>GTM Strategy, Investment Plan, and Pro Forma</h2>
 <p class="section-lede">BraceLine is the active braced-wall workload app for architects, planners, builders, and evaluators. TJAOS remains the operating system for project governance, capital planning, research, product roadmap, and investor-facing reporting.</p>
+
+<div class="status-panel" aria-label="BraceLine project business plan progress">
+<div class="status-top">
+<div>
+<span class="section-kicker">Stakeholder Status</span>
+<h3>BraceLine Project Readiness</h3>
+<p>BraceLine is the actual project being advanced: the workload intake app for architects, planners, builders, and evaluators. TJAOS is tracking the business plan, capital path, and investor readiness around it.</p>
+</div>
+<div class="status-score"><strong>72%</strong><span>Complete</span></div>
+</div>
+<div class="progress-track"><div class="progress-fill" style="width:72%"></div></div>
+<div class="status-meta">
+<div class="status-chip"><span>Actual Project</span><strong>BraceLine application</strong></div>
+<div class="status-chip"><span>Current Phase</span><strong>Investor and pilot readiness</strong></div>
+<div class="status-chip"><span>Next Milestone</span><strong>Architect design-partner validation</strong></div>
+<div class="status-chip"><span>Open Decision</span><strong>Seed ask, ownership target, pilot pricing</strong></div>
+</div>
+<div class="status-grid">
+<div class="status-item"><div class="status-item-head"><span>BraceLine product definition</span><span>86%</span></div><div class="mini-track"><div class="mini-fill" style="width:86%"></div></div></div>
+<div class="status-item"><div class="status-item-head"><span>Business model / pricing</span><span>78%</span></div><div class="mini-track"><div class="mini-fill" style="width:78%"></div></div></div>
+<div class="status-item"><div class="status-item-head"><span>GTM and geography</span><span>76%</span></div><div class="mini-track"><div class="mini-fill" style="width:76%"></div></div></div>
+<div class="status-item"><div class="status-item-head"><span>Financial model / ROI</span><span>74%</span></div><div class="mini-track"><div class="mini-fill" style="width:74%"></div></div></div>
+<div class="status-item"><div class="status-item-head"><span>Exit strategy</span><span>68%</span></div><div class="mini-track"><div class="mini-fill" style="width:68%"></div></div></div>
+<div class="status-item"><div class="status-item-head"><span>Pilot proof / validation</span><span>52%</span></div><div class="mini-track"><div class="mini-fill" style="width:52%"></div></div></div>
+</div>
+</div>
 
 <div class="plan-card">
 <h3>Latest Strategic Input</h3>
