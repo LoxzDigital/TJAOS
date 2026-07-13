@@ -113,7 +113,7 @@ details[open] summary:before{content:"-";background:#1d5f93;color:#fff}
 <section id="dashboard" class="page active">
 <h2>Executive Dashboard</h2>
 <div class="grid">
-<div class="card"><h3>289</h3><p>Estimated Project Hours</p></div>
+<div class="card"><h3>295</h3><p>Estimated Project Hours</p></div>
 <div class="card"><h3>68%</h3><p>MVP Progress</p></div>
 <div class="card"><h3>January</h3><p>Project Kickoff with Susan</p></div>
 <div class="card"><h3>BraceLine</h3><p>Active workload intake app</p></div>
@@ -190,7 +190,15 @@ details[open] summary:before{content:"-";background:#1d5f93;color:#fff}
 <li>Updated GitHub Pages routing, ledger copy, and deployment verification.</li>
 </ul>
 </details>
-<div class="ledger-total"><span>Total</span><span>289 (estimated)</span></div>
+<details open>
+<summary><span class="summary-title">Upload Intake with Active Plan Update</span><span class="summary-hours">6</span></summary>
+<ul class="breakdown">
+<li>Updated BraceLine upload intake so uploaded plans become the active design context.</li>
+<li>Added recent-upload restoration and active generated sheet preview behavior.</li>
+<li>Validated Hampton and Hayward PDF routing with distinct generated outputs.</li>
+</ul>
+</details>
+<div class="ledger-total"><span>Total</span><span>295 (estimated)</span></div>
 </div>
 </section>
 
@@ -508,9 +516,9 @@ const kb={
 susan:"Susan participated in the January kickoff and planning sessions.",
 julius:"Julius is involved in project coordination and upcoming strategy meetings.",
 zac:"Zac assisted with obtaining project plans.",
-codex:"Estimated Codex effort: 72 hours, plus 3 hours added today for OS and BraceLine routing.",
+codex:"Estimated Codex effort: 72 hours, plus 9 additional tracked hours for OS routing and Upload Intake with active plan updates.",
 base44:"Estimated Base44 prototype effort: 10 hours.",
-hours:"Current reconstructed estimate totals approximately 289 hours after adding 3 hours for today's OS and BraceLine routing update.",
+hours:"Current reconstructed estimate totals approximately 295 hours after adding 6 hours for the Upload Intake with active plan update.",
 braceline:"BraceLine is the active app for architect, planner, builder, and evaluator workload intake. TJAOS is the operating system around the project."
 };
 document.getElementById('q').oninput=e=>{
